@@ -63,7 +63,7 @@ $(function () {
         // 将登陆成功得到的 token 字符串，保存到 localStorage 中
         localStorage.setItem('token', res.token)
         // 跳转后台主页
-        location.href = 'G:/Vscode/课堂练习/大事件/第一天/index.html'
+        location.href = '/大事件/第一天/index.html'
       }
     })
   })

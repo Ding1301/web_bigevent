@@ -8,7 +8,7 @@ $(function () {
             // 1.清空本地存储的 token
             localStorage.removeItem('token')
             // 2.重新跳转到登录页面
-            location.href = 'login.html'
+            location.href = '/大事件/第一天/login.html'
 
             // 关闭 confirm 询问框
             layer.close(index)
@@ -29,6 +29,7 @@ function getUserInfo() {
             if (res.status !== 0) {
                 return layui.layer.msg('获取用户信息失败!')
             }
+            console.log(res)
             // 调用 renderAvatar 渲染用户的头像
             renderAvatar(res.data)
         },
@@ -51,7 +52,7 @@ function getUserInfo() {
 // 渲染用户的头像
 function renderAvatar(user) {
     // 1.获取用户的名称
-    var name = user.inckname || user.username
+    var name = user.nickname || user.username
     // 2.设置欢迎的文本
     $('#welcome').html('欢迎&nbsp;&nbsp;' + name)
     // 3.按需渲染用户的头像

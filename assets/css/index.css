@@ -26,11 +26,12 @@ a{
 }
 
 .userinfo{
-  padding-left: 40px;
+  padding-left: 14px;
   height: 60px;
   font-size: 12px;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .layui-side-scroll .userinfo{
